@@ -9,7 +9,7 @@
   * [1.5 功底补充](di-1-zhang-zha-ma-ff1a-kan-kan-gong-di-ru-he/15-yuan-sheng-tai-lei-xing.md)
   * [1.6 常见的目录与工具包](di-1-zhang-zha-ma-ff1a-kan-kan-gong-di-ru-he/16-chang-jian-de-mu-lu-yu-gong-ju-bao.md)
   * [1.7 面对技术，我们纠结的那些事儿](di-1-zhang-zha-ma-ff1a-kan-kan-gong-di-ru-he/17-mian-dui-ji-zhu-ff0c-wo-men-jiu-jie-de-na-xie-shi-er.md)
-  * 1.8 老A是在逆境中迎难而上者
+  * [1.8 老A是在逆境中迎难而上者](di-1-zhang-zha-ma-ff1a-kan-kan-gong-di-ru-he/18-lao-a-shi-zai-ni-jing-zhong-ying-nan-er-shang-zhe.md)
 * [第2章 Java程序员要知道计算机工作原理](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li.md)
 * [第3章 JVM，Java程序员的OS](di-3-zhang-jvm-java-cheng-xu-yuan-de-os.md)
 
