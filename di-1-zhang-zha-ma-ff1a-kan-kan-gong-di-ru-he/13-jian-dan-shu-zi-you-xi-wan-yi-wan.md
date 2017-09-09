@@ -43,4 +43,29 @@ public static boolean isPublicFinalStaticc(int mode) {
 ## 3.4 简单的数据转换
 1. 将十进制数据转换为“二进制的字符串”，使用 `Integer.toBinaryString(int x)` 。数据存储本身以二进制存储，这只是转化成二进制用于UI的展示。
 2. 将十进制数据转换为“十六进制的字符串”，使用 `Integer.toHexString(int x)` 。
-3. 其他进制的数据转换为十进制数据，使用 `Integer.parseInt(String, int)` 、 `Integer.valueOf(String, int)` 。其中后者在源码上直接调用的前者。
+3. 其他进制的数据转换为十进制数据，使用 `Integer.parseInt(String, int)` 、 `Integer.valueOf(String, int)` 。其中后者在源码上直接调用的前者。  
+  
+数字与 `byte[]` 之间的转换是什么意思呢？大家都知道，在 `Java` 语言中， `int` 是由 4 个字节（ `byte` ）组成的。在网络上发送数据的时候，都是通过 `byte` 流来处理的，所以会发送 4 个 `byte` 的内容， 4 个 `byte` 会由高到低顺序排列发送，接收方反向解析。在 `Java` 中可以基于 `DataOutputStream` 、 `DataInputStream` 的 `writeInt(int)` 和 `readInt()` 来得到正确的数字。源码如下：
+```java
+public final void writeInt(int v) throws IOException {
+    out.write((v >>> 24) & 0xFF);
+    out.write((v >>> 16) & 0xFF);
+    out.write((v >>>  8) & 0xFF);
+    out.write((v >>>  0) & 0xFF);
+    incCount(4);
+}
+```
+```java
+public final int readInt() throws IOException {
+    int ch1 = in.read();
+    int ch2 = in.read();
+    int ch3 = in.read();
+    int ch4 = in.read();
+    if ((ch1 | ch2 | ch3 | ch4) < 0)
+        throw new EOFException();
+    return ((ch1 << 24) + (ch2 << 16) + (ch3 << 8) + (ch4 << 0));
+}
+```
+
+## 3.5 数字太大， `long` 都存放不下
+`long` 采用 8 个字节来存放数字，如果遇到了变态的设置，需要使用 `BigDecimal` 来操作，它不是以固定长度的字节来存储数据，而是以对象的方式管理位的，支持加减乘除，由于是对象，因此需要调用对应的方法来实现加减乘除，其中除的方法需要指明小说点个数以及是否四舍五入等。
