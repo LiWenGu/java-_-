@@ -3,15 +3,14 @@
 ---
 
 ## 3.1 变量 A 、 B 交换有几种方式
-
-1. 使用中间变量
-2. 数据叠加后再减回来：
+1. 使用中间量。
+2. 使用数据叠加后减回来：
 ```java
 A = A + B;
 B = A - B;
 A = A - B;
 ```
-3. 异或运算：
+3. 使用异或：
 ```java
 A = A ^ B;
 B = A ^ B;
@@ -19,28 +18,29 @@ A = A ^ B;
 ```
 
 ## 3.2 将无序数据 Hash 到指定的板块
-假如有一个长度为5000的数组，每个数组像 Hash 桶那样存放一个链表，此时有一个数据 A 需要写入，随机吗？肯定不行，因为我们还要查询数据。那么将它放在 Hash 桶里面可以吗？似乎可以，下面一起来探讨一下。  
-  
-我们希望写入的数据能按照某种规则读取出来，那么数据应当与数组额下标产生某种关系，这样写入和读取只要按照相同的规则就可以达到目的。此时假设一个“非负数”要写入，或许可以这样做，将这个数据 % 5000 就可以得到下标了，这样在数字不断变化时，得到的下标也会不断变化，数据自然会相对均匀分布到 5000 个数组中。如果是负数，则需要采用取绝对值 `Math.abs(A)` % 5000 来得到下标。  
-  
-或者使用高效率的与运算，使用 A & 4999。只是会有个问题：使用数字 11 来说明更清晰，长度为 11 的数组，使用 10 做 & 操作， 10 的二进制位是“1010”，那么意味着 0001 、 0100 、 0101 这些数字将永远是下标为 0 的桶，即， 1 、 8 、 9 这几个下标永远没有数据，因为数据都去下标 0 的桶了。
+假设有一个长度为 5000 的数组，希望写入的数据能按照某种规则读取出来，因此不能随机写入，那么数据应当与数组的下标产生某种关系，这样写入和读取只要按照相同的规则就可以达到目的了。即数据 % 5000 就可以得到数组的下标了。当然也可以使用 数据 & 4999 来得到下标，但是会有一个问题：假设数组长度为 11 ，则使用 10 来进行 & 操作。那么， 0001 、 0100 、 0101 这些数字永远都会放在下标为 0 的地方，而导致没有数据。
 
-## 3.3 大量判定“是|否”操作
-在“ `java.lang.reflect.Modifier` ”中，它对类型的修饰符有各种各样的判定（例如，字节码中存储 `public final static` 这样的一长串内容只用一个数字来表达），源码如下：
+## 3.3 大量判定“是|否”的操作
+以下为java.lang.reflect.Modifier类的源码：
 ```java
 public static final int PUBLIC           = 0x00000001;
-
+ 
 public static final int PRIVATE          = 0x00000002;
 
 public static final int PROTECTED        = 0x00000004;
 
 public static final int STATIC           = 0x00000008;
+
+public static final int FINAL            = 0x00000010;
 ```
-这样，如果需要需要判定它是不是 `public final static` ，则使用 `final static int PUBLIC_FINAL_STATIC = PUBLIC | FINAL | STATIC`。示例如下：
+这样，Java程序在读取字节码时，读取到一个数字，该数字只需要与对应的编码进行 & 操作，genuine结果是否为 0 即可得到答案。而且还可以同时判断是否属于多个，如下代码：
 ```java
-public static boolean isPublicFinalStatic(int mod) {
-  return (mod & PUBLIC_FINAL_STATIC) == PUBLIC_FINAL_STATIC;
+final static int PUBLIC_FINAL_STATIC = PUBLIC | FINAL | STATIC 
+public static boolean isPublicFinalStaticc(int mode) {
+    return (mod & PUBLIC_FINAL_STATIC) == PUBLIC_FINAL_STATIC;
 }
 ```
-
 ## 3.4 简单的数据转换
+1. 将十进制数据转换为“二进制的字符串”，使用 `Integer.toBinaryString(int x)` 。数据存储本身以二进制存储，这只是转化成二进制用于UI的展示。
+2. 将十进制数据转换为“十六进制的字符串”，使用 `Integer.toHexString(int x)` 。
+3. 其他进制的数据转换为十进制数据，使用 `Integer.parseInt(String, int)` 、 `Integer.valueOf(String, int)` 。其中后者在源码上直接调用的前者。
