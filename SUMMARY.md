@@ -13,5 +13,6 @@
 * [第2章 Java程序员要知道计算机工作原理](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li.md)
   * [2.1 Java程序员需要知道计算机工作原理吗？](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/21-javacheng-xu-yuan-xu-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li-ma-ff1f.md)
   * [2.2 CPU的那些事儿](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/22-cpude-na-xie-shi-er.md)
+  * 2.3 内存
 * [第3章 JVM，Java程序员的OS](di-3-zhang-jvm-java-cheng-xu-yuan-de-os.md)
 
