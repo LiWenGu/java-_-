@@ -15,6 +15,6 @@
   * [2.2 CPU的那些事儿](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/22-cpude-na-xie-shi-er.md)
   * [2.3 内存](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/23-nei-cun.md)
   * [2.4 磁盘](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/24-ci-pan.md)
-  * 2.5 缓存
+  * [2.5 缓存](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/25-huan-cun.md)
 * [第3章 JVM，Java程序员的OS](di-3-zhang-jvm-java-cheng-xu-yuan-de-os.md)
 
