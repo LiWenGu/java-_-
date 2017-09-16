@@ -16,5 +16,6 @@
   * [2.3 内存](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/23-nei-cun.md)
   * [2.4 磁盘](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/24-ci-pan.md)
   * [2.5 缓存](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/25-huan-cun.md)
+  * [2.6 关于网络与数据库](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/26-guan-yu-wang-luo-yu-shu-ju-ku.md)
 * [第3章 JVM，Java程序员的OS](di-3-zhang-jvm-java-cheng-xu-yuan-de-os.md)
 
