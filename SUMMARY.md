@@ -19,5 +19,6 @@
   * [2.6 关于网络与数据库](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/26-guan-yu-wang-luo-yu-shu-ju-ku.md)
   * [2.7 总结](di-2-zhang-java-cheng-xu-yuan-yao-zhi-dao-ji-suan-ji-gong-zuo-yuan-li/27-zong-jie.md)
 * [第3章 JVM，Java程序员的OS](di-3-zhang-jvm-java-cheng-xu-yuan-de-os.md)
-  * 3.1 学习Java虚拟机对我们有什么好处
+  * [3.1 学习Java虚拟机对我们有什么好处](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/31-xue-xi-java-xu-ni-ji-dui-wo-men-you-shi-yao-hao-chu.md)
+  * [3.2 跨平台与字节码基本原理](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/32-kua-ping-tai-yu-zi-jie-ma-ji-ben-yuan-li.md)
 
