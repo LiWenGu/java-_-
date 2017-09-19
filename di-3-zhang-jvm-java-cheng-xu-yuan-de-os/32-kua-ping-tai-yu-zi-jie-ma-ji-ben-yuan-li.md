@@ -122,5 +122,7 @@ public static void test() {
 6. 使用 `getClass().getResource("").getPath()` 获得这个 `Class` 的来源路径是哪个 `jar` 包。
 
 ## 2.4 字节码增强
+`AOP` 技术其实是字节码增强技术， `JVM` 提供的动态代理底层也是字节码增强技术。笔者个人觉得书中讲解性比较多，初学者可以见原书此节，这里就不再讲述了，这里推荐一个开源项目：`tiny-spring`
+>tiny-spring是为了学习Spring的而开发的，可以认为是一个Spring的精简版。Spring的代码很多，层次复杂，阅读起来费劲。我尝试从使用功能的角度出发，参考Spring的实现，一步一步构建，最终完成一个精简版的Spring。有人把程序员与画家做比较，画家有门基本功叫临摹，tiny-spring可以算是一个程序的临摹版本-从自己的需求出发，进行程序设计，同时对著名项目进行参考。项目地址：https://github.com/code4craft/tiny-spring
 
 
