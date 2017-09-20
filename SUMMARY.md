@@ -23,4 +23,5 @@
   * [3.2 跨平台与字节码基本原理](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/32-kua-ping-tai-yu-zi-jie-ma-ji-ben-yuan-li.md)
   * [3.3 从虚拟机的板块开始](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/33-cong-xu-ni-ji-de-ban-kuai-kai-shi.md)
   * [3.4 常见的虚拟机回收算法](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/34-chang-jian-de-xu-ni-ji-hui-shou-suan-fa.md)
+  * [3.5 浅析 Java 对象的内存结构](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/35-qian-xi-java-dui-xiang-de-nei-cun-jie-gou.md)
 
