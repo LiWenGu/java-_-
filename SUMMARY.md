@@ -24,4 +24,7 @@
   * [3.3 从虚拟机的板块开始](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/33-cong-xu-ni-ji-de-ban-kuai-kai-shi.md)
   * [3.4 常见的虚拟机回收算法](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/34-chang-jian-de-xu-ni-ji-hui-shou-suan-fa.md)
   * [3.5 浅析 Java 对象的内存结构](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/35-qian-xi-java-dui-xiang-de-nei-cun-jie-gou.md)
+  * [3.6 常见的 OOM 现象](di-3-zhang-jvm-java-cheng-xu-yuan-de-os/36-chang-jian-de-oom-xian-xiang.md)
+  * 3.7 常见的 Java 工具
+* [第4章 Java通信，交互就需要通信](di-4-zhang-java-tong-xin-ff0c-jiao-hu-jiu-xu-yao-tong-xin.md)
 
